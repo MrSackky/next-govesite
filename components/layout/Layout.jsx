@@ -3,6 +3,11 @@ import Head from 'next/head';
 /* Components */
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import Recommend from '../content/Recommend';
+import Details from '../content/Details';
+import System from '../content/System';
+import Package from '../content/Package';
+import Contact from '../content/Contact';
 
 export default function Layout({
   children,
@@ -60,7 +65,12 @@ export default function Layout({
         /> */}
       </Head>
       <Header />
-      {children}
+      {/* {children} */}
+      <Recommend />
+      <Details />
+      <System />
+      <Package />
+      <Contact />
       <Footer />
       <style jsx global>{`
         html,
@@ -217,12 +227,14 @@ export default function Layout({
         }
 
         .navbar {
+          background-color: #FFFFFF;
           position: relative;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
           padding: 0.5rem 1rem;
+          height: 60px;
         }
 
         .container {
@@ -300,12 +312,9 @@ export default function Layout({
 
         footer {
           width: 100%;
-          height: 80px;
-          text-align: center;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          height: 100%;
+          background-color: #000000;
+          font-color: #ffffff;
         }
 
         footer::before {
