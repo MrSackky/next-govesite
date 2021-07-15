@@ -2,7 +2,10 @@ import Head from 'next/head';
 import Router from 'next/router';
 import { getAppCookies, verifyToken } from '../middleware/utils';
 import NProgress from 'nprogress';
-
+// import '../styles/globals.css'
+import '../styles/default.css'
+import 'tailwindcss/tailwind.css'
+import 'antd/dist/antd.css';
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', url => {
   NProgress.start();

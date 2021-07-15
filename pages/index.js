@@ -5,6 +5,7 @@ import { absoluteUrl } from '../middleware/utils';
 
 /* components */
 import Layout from '../components/layout/Layout';
+import UserNav from '../components/navigation/User';
 
 export default function Home(props) {
   const { user, origin } = props;
@@ -28,6 +29,7 @@ export default function Home(props) {
             />
             <img src="/nextjs.svg" alt="Next.js" width="160" />
           </p>
+          <UserNav props={{ user: user }} />
           <div className="grid">
             <Link href="/user">
               <a className="card">

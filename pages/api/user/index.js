@@ -15,14 +15,14 @@ const handler = nextConnect()
 
     const users = await models.users.findAndCountAll({
       include: [
-        {
-          model: models.posts,
-          as: 'posts',
-        },
-        {
-          model: models.jobs,
-          as: 'jobs',
-        },
+        // {
+        //   model: models.posts,
+        //   as: 'posts',
+        // },
+        // {
+        //   model: models.jobs,
+        //   as: 'jobs',
+        // },
       ],
       order: [
         // Will escape title and validate DESC against a list of valid direction parameters

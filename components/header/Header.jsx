@@ -1,33 +1,34 @@
 import Link from 'next/link';
-import { Row, Col } from 'antd';
-import { Button } from 'antd';
+
+/* Components */
+// import DarkModeToggle from "../DarkModeToggle";
 
 const Header = ({ props }) => {
   return (
-    <navbar className="navbar">
-      <Row>
+    <>
+      <nav className="navbar navbar-expand-lg p-2">
         <Link href="/">
-          <a>LOGO</a>
+          <a className="nav-item nav-link">Home</a>
         </Link>
-      </Row>
-      <Row>
-        <Link href="#Details">
-          <a>คุณสมบัติ</a>
-        </Link>
-        <Link href="#Package">
-          <a>แพคเพจ</a>
-        </Link>
-        <Link href="#Contact">
-          <a>ติดต่อเรา</a>
-        </Link>
-      </Row>
-      <Row>
-        <Link href="/">
-          <a>เข้าสู่ระบบ</a>
-        </Link>
-        |<Button type="primary">สมัครใช้งาน</Button>
-      </Row>
-    </navbar>
+        {/* <Link href="/about">
+          <a className="nav-item nav-link">About</a>
+        </Link> */}
+        {/* <Link href="/forever">
+          <a className="nav-item nav-link">Forever</a>
+        </Link> */}
+        {/* <a href="/non-existing" className="nav-item nav-link">
+          Non Existing Page
+        </a> */}
+        {/* <span className="align-self-center ml-auto">
+          <DarkModeToggle />
+        </span> */}
+      </nav>
+      <style jsx>{`
+        a {
+          margin: 0 10px 0 0;
+        }
+      `}</style>
+    </>
   );
 };
 
